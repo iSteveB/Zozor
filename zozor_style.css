@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'ballparkweiner';
+    src: url('polices/ballpark-webfont.woff2') format('woff2'),
+         url('polices/ballpark-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'day_romanregular';
+    src: url('polices/dayrom-webfont.woff2') format('woff2'),
+         url('polices/dayrom-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*Page Entière*/
+
+#bloc_page
+{
+	width: 950px;
+	margin: auto;
+}
+
+@media all and (max-width: 1024px)
+{
+    #bloc_page
+    {
+        width: auto;
+    }
+}
+
+body
+{
+	background-image: url(images/fond_jaune.png);
+	background-attachment: fixed;
+}
+
+/*Logo*/
+
+#logo_titre
+{
+	display: flex;
+	flex-wrap: wrap;
+	width: 200px;
+}
+header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	background-image: url(images/separateur.png);
+	background-position: bottom;
+	background-repeat: repeat-x;
+	margin-bottom: 10px;
+}
+header img
+{
+	height: 50px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+header h1
+{
+	font-family: ballparkweiner, arial, serif;
+	margin-left: 10px;
+	margin-bottom: 0px;
+}
+header h2
+{
+	font-size: 0.9em;
+	font-family: day_romanregular, arial, serif;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	padding-left: 18px;
+}
+
+/*Menu*/
+nav ul
+{
+	display: flex;
+	list-style-type: none;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+}
+nav li
+{
+	display: flex;
+	padding-left: 15px;
+	font-size: 1.3em;
+}
+nav a:hover
+{
+	text-decoration: underline 3px;
+	color: rgba(177, 0, 0, 0.7);
+}
+nav a
+{
+	text-decoration: none;
+	color: black;
+}
+
+@media all and (max-width: 1024px)
+{
+	nav 
+	{
+		width: auto;
+		text-align: left;
+	}
+
+	 nav ul
+    {
+        flex-direction: column;
+    }
+
+    nav li
+    {
+        padding-left: 4px;
+    }
+    
+    nav a
+    {
+        font-size: 1.1em;
+    }
+    
+    nav a:hover
+    {
+        border-bottom: 0;
+    }
+}
+
+/*Bannière*/
+
+#banniere_sf
+{
+	margin-top: 20px;
+	margin-bottom: 30px;
+	position: relative;
+}
+#banniere_sf p
+{
+	width: 380px;
+	color: white;
+	background-color: rgba(17, 20, 21, 0.5);
+	border-radius: 10px 10px 10px 10px;
+	padding: 5px;
+	position: absolute;
+	left: 96px;
+	top: 175px;
+}
+#banniere_sf a
+{
+	position: absolute;
+	top: 193px;
+	left: 400px;
+	background-color: rgba(213, 0, 0, 0.7);
+	border-radius: 10px 10px 10px 10px;
+	padding: 4px;
+	color:white;
+	text-decoration: none;
+}
+#banniere_sf a:hover
+{
+	color: black;
+}
+#banniere_sf img
+{
+	box-shadow: 2px 5px 5px black;
+	border-radius: 10px;
+}
+
+@media all and (max-width: 1024px)
+{
+    #banniere_sf
+    {
+        display: none;
+    }
+}
+
+/*Section*/
+
+section
+{
+	display: flex;
+	margin-top: 30px;
+	margin: auto;
+	font-family: day_romanregular;
+	margin-bottom: 30px;
+}
+
+/*Article*/
+
+#article_title
+{
+	width: 500px;
+	display: flex;
+}
+#article_title img
+{
+	width: 50px;
+	margin-right: 10px;
+}
+article p
+{
+	width: 650px;
+	text-align: justify;
+	margin-right: 30px;
+}
+
+/*Bulle Zozor*/
+
+aside
+{
+	background-color: rgb(128, 128, 128);
+	text-align: justify;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px; 
+	padding-top: 5px;
+	height: auto;
+	border-radius: 10px;
+	margin-top: 40px;
+	box-shadow: 3px 3px 6px black;
+	position: relative;
+}
+#fleche
+{
+	position: absolute;
+	right: 270px;
+	top: 120px;
+}
+#bulle_zozor img
+{
+	margin-left: 55px;
+	border : 1px solid black;
+}
+
+aside h1
+{
+	color: white;
+	text-align: center;
+}
+aside p
+{
+	color: white;
+	font-size: 0.8em;
+	text-align: center justify;
+}
+
+@media all and (max-width: 1024px)
+{
+    section
+    {
+        flex-direction: column;
+    }
+
+    article p, aside
+    {
+        width: auto;
+        margin-bottom: 15px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    aside h1
+    {
+    	text-align: left;
+    }
+    #fleche
+    {
+        display: none;
+    }
+    #bulle_zozor
+    {
+    	text-align: left;
+    }
+    .photo_zozor
+    {
+        width: 110px;
+        float: right;
+        margin-left: 15px;
+    }
+    
+    aside div:last-child
+    {
+        text-align: center;
+    }
+}
+
+/*Pied de page*/
+
+footer
+{
+	display: flex;
+	justify-content: space-between;
+	background-image: url(images/separateur.png);
+	background-position: top;
+	background-repeat: repeat-x;
+	list-style-image: url("images/ico_liensexterne.png");
+	position: relative;
+	padding-top: 20px;
+}
+footer h1
+{
+	font-size: 1em;
+	text-align: left;
+}
+#liste_amis
+{
+	display: flex;
+	color: maroon;
+}
+#photos img
+{
+	margin-left: 3px;
+	border: 1px solid black;
+}
+#flechebulle
+{
+	position: absolute;
+	left: 450px;
+	bottom: 131px;
+
+}
+
+@media all and (max-width: 1024px)
+{
+	footer
+    {
+    	flex-wrap: wrap;
+    }
+    #flechebulle
+    {
+    	display: none;
+    }
+
+}
+
+
+
+
+
